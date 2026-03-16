@@ -9,16 +9,36 @@ const navLinks = [
   { href: '#publications', label: 'Publications' },
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
+  { href: '#contact', label: 'Contact' },
 ]
+
+const sectionIds = navLinks.map(l => l.href.slice(1))
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const observers = []
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id)
+      if (!el) return
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id) },
+        // Trigger when a section occupies the middle band of the viewport
+        { rootMargin: '-40% 0px -55% 0px' }
+      )
+      obs.observe(el)
+      observers.push(obs)
+    })
+    return () => observers.forEach(o => o.disconnect())
   }, [])
 
   return (
@@ -31,7 +51,12 @@ export default function Header() {
 
         <nav className={`header-nav${menuOpen ? ' open' : ''}`}>
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} className="nav-link" onClick={() => setMenuOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              className={`nav-link${activeSection === link.href.slice(1) ? ' active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
               {link.label}
             </a>
           ))}

@@ -6,6 +6,8 @@ import Education from './pages/Education/Education'
 import Publications from './pages/Publications/Publications'
 import Projects from './pages/Projects/Projects'
 import Skills from './pages/Skills/Skills'
+import Contact from './pages/Contact/Contact'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Footer from './components/Footer/Footer'
 import './App.css'
 
@@ -21,7 +23,9 @@ function App() {
         <Publications />
         <Projects />
         <Skills />
+        <Contact />
       </main>
+      <ScrollToTop />
       <Footer />
     </>
   )

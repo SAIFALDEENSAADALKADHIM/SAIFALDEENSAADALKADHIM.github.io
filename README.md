@@ -1,16 +1,83 @@
-# React + Vite
+# Saif Aldeen Saad Al-Kadhim, Ph.D. — Academic Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**IEEE Researcher · MEMS Engineer · IoT Specialist · Sensor Scientist**  
+Institute of Electromechanical and Information Technology (IEMIT), Xi'an Jiaotong University
 
-Currently, two official plugins are available:
+🌐 **Live site:** https://saifaldeensaadalkadhim.github.io/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repository contains the source code of my personal academic portfolio website. It showcases my research in MEMS-based sensors, IoT systems, and sensor technologies, with publications in leading journals including *Sensors & Actuators A: Physical* (Elsevier).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Sections
+
+| Section | Description |
+|---|---|
+| **Hero** | Introduction, rotating titles, social links |
+| **News** | Latest research updates and milestones |
+| **Experience** | Research and professional roles |
+| **Education** | Ph.D., M.Sc., and B.Sc. degrees |
+| **Publications** | Peer-reviewed journal articles with citation counts |
+| **Projects** | Featured research projects |
+| **Skills** | Technical tools and expertise |
+| **Contact** | Email, ORCID, ResearchGate, Google Scholar, LinkedIn |
+
+---
+
+## Tech Stack
+
+- **Framework:** React 18 + Vite
+- **Styling:** CSS Modules (vanilla CSS, no Tailwind)
+- **Icons:** react-icons
+- **Deployment:** GitHub Actions → GitHub Pages
+
+---
+
+## Local Development
+
+```bash
+# Clone the repo
+git clone https://github.com/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM.git
+cd SAIFALDEENSAADALKADHIM
+
+# Install dependencies (Node 18+ required)
+npm install
+
+# Start local development server
+npm run dev
+# → http://localhost:5173
+```
+
+## Deploy to GitHub Pages
+
+The site auto-deploys to GitHub Pages on every push to `main` via GitHub Actions.
+
+To deploy manually:
+```bash
+npm run deploy
+```
+
+---
+
+## Academic Profiles
+
+- 🔬 **ORCID:** [0000-0002-7887-4272](https://orcid.org/0000-0002-7887-4272)
+- 📚 **ResearchGate:** [Saif-Aldeen-Al-Kadhim](https://www.researchgate.net/profile/Saif-Aldeen-Al-Kadhim)
+- 🎓 **Google Scholar:** [View Profile](https://scholar.google.com/citations?user=SAIF_SCHOLAR)
+
+---
+
+## Selected Publications
+
+1. **Ionization-based aerosol sensor for early detection of Li-ion battery thermal runaway** — *Sensors and Actuators* (2025, In Press)
+2. **Triple-electrode CNT-based capacitive humidity sensor with high sensitivity and low hysteresis** — *Sensors and Actuators A: Physical*, Elsevier (2024)
+3. **Design and Implementation of CNC Machine via Wireless IoT Control System** — 49 citations
+
+---
+
+© 2026 Saif Aldeen Saad Obayes Al-Kadhim
+
