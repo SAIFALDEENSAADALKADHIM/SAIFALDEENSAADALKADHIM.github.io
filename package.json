@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://SAIFALDEENSAADALKADHIM.github.io/SAIFALDEENSAADALKADHIM",
+  "homepage": "https://saifaldeensaadalkadhim.github.io/SAIFALDEENSAADALKADHIM",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
