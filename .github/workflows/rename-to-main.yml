@@ -1,0 +1,38 @@
+name: Rename branch to main and clean up
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rename-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+        with:
+          ref: copilot/customize-portfolio-data
+          fetch-depth: 0
+
+      - name: Force-update main to this branch
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git push --force origin HEAD:main
+          echo "✅ main branch updated to match copilot/customize-portfolio-data"
+
+      - name: Delete copilot/customize-portfolio-data branch
+        run: |
+          git push origin --delete "copilot/customize-portfolio-data" || true
+          echo "✅ copilot/customize-portfolio-data branch deleted"
+
+      - name: Summary
+        run: |
+          echo "## Branch rename complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ \`main\` now contains all portfolio code" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ \`copilot/customize-portfolio-data\` deleted" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The deploy workflow will automatically run now that \`main\` has been updated." >> $GITHUB_STEP_SUMMARY
