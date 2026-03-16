@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 70px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+section:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+}
