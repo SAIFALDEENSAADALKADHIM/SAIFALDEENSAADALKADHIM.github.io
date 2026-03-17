@@ -1,4 +1,11 @@
 :root {
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
   --bg-primary: #0a0a0a;
   --bg-secondary: #111111;
   --bg-card: #1a1a1a;
@@ -89,6 +96,29 @@ button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+.skip-link:focus-visible {
+  left: 16px;
+  top: 16px;
+  background: var(--bg-card);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 999px;
+  z-index: 9999;
+}
+
+/* Suspense loader */
+.loader {
+  text-align: center;
+  padding: var(--space-6) 0;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
 }
 
 /* Card base */

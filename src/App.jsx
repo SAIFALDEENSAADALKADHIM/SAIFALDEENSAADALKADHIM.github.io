@@ -13,9 +13,10 @@ const News = lazy(() => import('./pages/News/News'))
 function App() {
   return (
     <div className="app">
+      <a className="skip-link" href="#main">Skip to content</a>
       <Header />
-      <main>
-        <Suspense fallback={null}>
+      <main id="main">
+        <Suspense fallback={<div className="loader">Loading…</div>}>
           <Hero />
           <Experience />
           <Education />
