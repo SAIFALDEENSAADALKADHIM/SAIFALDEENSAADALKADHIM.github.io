@@ -23,9 +23,9 @@ const newsItems = [
 
 export default function News() {
   return (
-    <section id="news">
+    <section id="news" aria-labelledby="news-heading">
       <div className="container">
-        <h2 className="section-title">News</h2>
+        <h2 id="news-heading" className="section-title">News</h2>
         <p className="section-subtitle">Recent updates and announcements</p>
         <div className="news-grid">
           {newsItems.map((item) => (

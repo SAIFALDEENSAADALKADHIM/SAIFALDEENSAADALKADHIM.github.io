@@ -8,7 +8,7 @@ const publications = [
     journal: 'IEEE Sensors Journal',
     authors: 'Saif Aldeen Saad Al-Kadhim et al.',
     citations: null,
-    doi: '#',
+    doi: '',
   },
   {
     year: '2024',
@@ -16,7 +16,7 @@ const publications = [
     journal: 'Sensors & Actuators A: Physical',
     authors: 'Saif Aldeen Saad Al-Kadhim et al.',
     citations: null,
-    doi: '#',
+    doi: '',
   },
   {
     year: '2023',
@@ -24,7 +24,7 @@ const publications = [
     journal: 'Microsystem Technologies',
     authors: 'Saif Aldeen Saad Al-Kadhim et al.',
     citations: null,
-    doi: '#',
+    doi: '',
   },
   {
     year: '2020',
@@ -32,17 +32,17 @@ const publications = [
     journal: 'IEEE Conference Proceedings',
     authors: 'Saif Aldeen Saad Al-Kadhim et al.',
     citations: 49,
-    doi: '#',
+    doi: '',
   },
 ]
 
 export default function Publications() {
   return (
-    <section id="publications">
+    <section id="publications" aria-labelledby="pub-heading">
       <div className="container">
         <div className="pub-header-row">
           <div>
-            <h2 className="section-title">Publications</h2>
+            <h2 id="pub-heading" className="section-title">Publications</h2>
             <p className="section-subtitle">Peer-reviewed research and conference papers</p>
           </div>
           <div className="pub-metrics">
@@ -79,10 +79,18 @@ export default function Publications() {
                 <p className="pub-authors">{pub.authors}</p>
                 <p className="pub-journal">{pub.journal}</p>
                 <div className="pub-footer">
-                  {pub.citations && (
-                    <span className="pub-citations">📊 {pub.citations} citations</span>
-                  )}
-                  <a href={pub.doi} className="pub-doi" target="_blank" rel="noreferrer">
+                  <span className="pub-citations">
+                    📊 {pub.citations !== null ? `${pub.citations} citations` : 'Pending'}
+                  </span>
+                  <a
+                    href={pub.doi || undefined}
+                    className="pub-doi"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={pub.doi ? `Open DOI for ${pub.title}` : 'DOI not available'}
+                    {...(!pub.doi && { 'aria-disabled': 'true' })}
+                    onClick={!pub.doi ? (e) => e.preventDefault() : undefined}
+                  >
                     DOI <FaExternalLinkAlt size={11} />
                   </a>
                 </div>
