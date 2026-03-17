@@ -46,7 +46,7 @@ export default function Hero() {
           </p>
           <div className="hero-links">
             <a
-              href="https://scholar.google.com"
+              href="https://scholar.google.com/citations?user=3rVW_uYAAAAJ&hl=en&oi=ao"
               target="_blank"
               rel="noreferrer"
               className="btn btn-primary"

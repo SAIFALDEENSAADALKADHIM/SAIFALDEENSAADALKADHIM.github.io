@@ -65,7 +65,7 @@ export default function Header() {
           <a href="https://orcid.org" target="_blank" rel="noreferrer" aria-label="ORCID">
             <SiOrcid />
           </a>
-          <a href="https://scholar.google.com" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+          <a href="https://scholar.google.com/citations?user=3rVW_uYAAAAJ&hl=en&oi=ao" target="_blank" rel="noreferrer" aria-label="Google Scholar">
             <FaGoogleScholar />
           </a>
         </div>

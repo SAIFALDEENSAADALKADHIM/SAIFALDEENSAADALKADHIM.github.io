@@ -62,7 +62,7 @@ export default function Publications() {
         </div>
 
         <a
-          href="https://scholar.google.com"
+          href="https://scholar.google.com/citations?user=3rVW_uYAAAAJ&hl=en&oi=ao"
           target="_blank"
           rel="noreferrer"
           className="btn btn-outline scholar-btn"
