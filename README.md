@@ -1,24 +1,88 @@
-# Hi there, I'm SAIFALDEENSAADALKADHIM 👋
+## Hi there 👋
 
-Welcome to my GitHub profile README!
+<!--
+**SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-[![Stars](https://img.shields.io/github/stars/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM?style=flat-square)](https://github.com/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM/stargazers)
-[![Forks](https://img.shields.io/github/forks/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM?style=flat-square)](https://github.com/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM/network/members)
-[![Issues](https://img.shields.io/github/issues/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM?style=flat-square)](https://github.com/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM?style=flat-square)](https://github.com/SAIFALDEENSAADALKADHIM/SAIFALDEENSAADALKADHIM/commits)
+Here are some ideas to get you started:
 
-## About
+- 🔭 I'm currently working on ...
+- 🌱 I'm currently learning ...
+- 👯 I'm looking to collaborate on ...
+- 🤔 I'm looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->
 
-I'm a developer passionate about building web applications. Feel free to explore my repositories and reach out!
+---
 
-## Language Stats
+## 🌐 Publishing at `https://saifaldeensaadalkadhim.github.io`
 
-![JavaScript](https://img.shields.io/badge/JavaScript-56.5%25-yellow?style=flat-square&logo=javascript)
-![CSS](https://img.shields.io/badge/CSS-42.3%25-blue?style=flat-square&logo=css3)
-![HTML](https://img.shields.io/badge/HTML-1.2%25-orange?style=flat-square&logo=html5)
+### Why the site currently appears at a sub-path
 
-## Contact
+GitHub Pages distinguishes between two kinds of sites:
 
-- 📫 Email: [your-email@example.com](mailto:your-email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- 🐦 Twitter/X: [@your-handle](https://twitter.com/your-handle)
+| Type | Repository name | Published URL |
+|------|----------------|---------------|
+| **User site** | `saifaldeensaadalkadhim.github.io` | `https://saifaldeensaadalkadhim.github.io` |
+| **Project site** | anything else (e.g. `SAIFALDEENSAADALKADHIM`) | `https://saifaldeensaadalkadhim.github.io/SAIFALDEENSAADALKADHIM/` |
+
+Because the portfolio lives in a repository named `SAIFALDEENSAADALKADHIM`, GitHub Pages treats it as a **project site** and appends the repository name to every URL.
+The only way to serve at the bare root domain is to host the content in a repository named **exactly** `saifaldeensaadalkadhim.github.io`.
+
+---
+
+### Steps to publish at the root URL
+
+#### 1. Create the user-site repository
+
+1. Go to <https://github.com/new>.
+2. Set **Repository name** to `saifaldeensaadalkadhim.github.io` (all lower-case).
+3. Keep it **Public**.
+4. Click **Create repository**.
+
+#### 2. Copy the portfolio source into the new repository
+
+```bash
+# Clone the new empty repo
+git clone https://github.com/SAIFALDEENSAADALKADHIM/saifaldeensaadalkadhim.github.io
+cd saifaldeensaadalkadhim.github.io
+
+# Copy all files from this portfolio project (adjust path as needed)
+cp -r /path/to/SAIFALDEENSAADALKADHIM/* .
+
+# Commit and push
+git add .
+git commit -m "Initial portfolio site"
+git push origin main
+```
+
+#### 3. Enable GitHub Pages in the new repository
+
+1. Open the new repository on GitHub.
+2. Go to **Settings → Pages**.
+3. Under **Source**, choose **GitHub Actions**.
+4. The `.github/workflows/deploy.yml` file (already in the project) will build and deploy the site automatically on every push to `main`.
+
+#### 4. Verify the deployment
+
+After the workflow finishes (~1–2 minutes), visit:
+
+```
+https://saifaldeensaadalkadhim.github.io
+```
+
+> **Note:** The `vite.config.js` in this project already uses `base: '/'`, which is the correct setting for a user site served at the root URL. No further Vite configuration is needed.
+
+---
+
+### Quick reference
+
+| Setting | Value |
+|---------|-------|
+| Repository name | `saifaldeensaadalkadhim.github.io` |
+| Pages source | GitHub Actions |
+| Deploy workflow | `.github/workflows/deploy.yml` |
+| Vite base path | `/` (already configured) |
+| Published URL | `https://saifaldeensaadalkadhim.github.io` |
