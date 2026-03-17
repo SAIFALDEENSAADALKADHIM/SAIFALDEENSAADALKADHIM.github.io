@@ -1,25 +1,29 @@
+import { lazy, Suspense } from 'react'
 import './App.css'
 import Header from './pages/Header/Header'
-import Hero from './pages/Hero/Hero'
-import Experience from './pages/Experience/Experience'
-import Education from './pages/Education/Education'
-import Projects from './pages/Projects/Projects'
-import Skills from './pages/Skills/Skills'
-import Publications from './pages/Publications/Publications'
-import News from './pages/News/News'
+
+const Hero = lazy(() => import('./pages/Hero/Hero'))
+const Experience = lazy(() => import('./pages/Experience/Experience'))
+const Education = lazy(() => import('./pages/Education/Education'))
+const Projects = lazy(() => import('./pages/Projects/Projects'))
+const Skills = lazy(() => import('./pages/Skills/Skills'))
+const Publications = lazy(() => import('./pages/Publications/Publications'))
+const News = lazy(() => import('./pages/News/News'))
 
 function App() {
   return (
     <div className="app">
       <Header />
       <main>
-        <Hero />
-        <Experience />
-        <Education />
-        <Projects />
-        <Skills />
-        <Publications />
-        <News />
+        <Suspense fallback={null}>
+          <Hero />
+          <Experience />
+          <Education />
+          <Projects />
+          <Skills />
+          <Publications />
+          <News />
+        </Suspense>
       </main>
     </div>
   )

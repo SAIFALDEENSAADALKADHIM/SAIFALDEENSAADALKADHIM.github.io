@@ -71,8 +71,8 @@ export default function Publications() {
         </a>
 
         <div className="pub-list">
-          {publications.map((pub, i) => (
-            <div key={i} className="card pub-card">
+          {publications.map((pub) => (
+            <div key={`${pub.title}-${pub.year}`} className="card pub-card">
               <div className="pub-year-badge">{pub.year}</div>
               <div className="pub-content">
                 <h3 className="pub-title">{pub.title}</h3>

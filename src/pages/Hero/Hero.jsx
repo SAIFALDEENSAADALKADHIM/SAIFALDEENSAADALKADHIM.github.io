@@ -15,14 +15,18 @@ export default function Hero() {
   const [visible, setVisible] = useState(true)
 
   useEffect(() => {
+    let timeoutId = null
     const interval = setInterval(() => {
       setVisible(false)
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setTitleIndex((prev) => (prev + 1) % titles.length)
         setVisible(true)
       }, 400)
     }, 2800)
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+      if (timeoutId) clearTimeout(timeoutId)
+    }
   }, [])
 
   return (
