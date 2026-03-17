@@ -149,7 +149,7 @@
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 3rem 1.5rem;
   }
 
@@ -168,5 +168,13 @@
 
   .avatar-placeholder {
     font-size: 2rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
   }
 }

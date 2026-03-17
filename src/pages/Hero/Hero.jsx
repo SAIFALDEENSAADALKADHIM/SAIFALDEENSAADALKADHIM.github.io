@@ -10,6 +10,8 @@ const titles = [
   'Sensor Scientist',
 ]
 
+const ROTATE_MS = 3200
+
 export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0)
   const [visible, setVisible] = useState(true)
@@ -21,8 +23,8 @@ export default function Hero() {
       timeoutId = setTimeout(() => {
         setTitleIndex((prev) => (prev + 1) % titles.length)
         setVisible(true)
-      }, 400)
-    }, 2800)
+      }, 300)
+    }, ROTATE_MS)
     return () => {
       clearInterval(interval)
       if (timeoutId) clearTimeout(timeoutId)
@@ -30,12 +32,12 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" aria-labelledby="hero-heading">
       <div className="container hero-container">
         <div className="hero-text">
           <p className="hero-greeting">Hello, I&apos;m</p>
-          <h1 className="hero-name">Saif Aldeen Saad Al-Kadhim, Ph.D.</h1>
-          <div className="hero-title-wrap">
+          <h1 id="hero-heading" className="hero-name">Saif Aldeen Saad Al-Kadhim, Ph.D.</h1>
+          <div className="hero-title-wrap" aria-live="polite">
             <span className={`hero-title ${visible ? 'visible' : 'hidden'}`}>
               {titles[titleIndex]}
             </span>
@@ -70,6 +72,15 @@ export default function Hero() {
               className="btn btn-outline"
             >
               <FaEnvelope /> Contact
+            </a>
+            <a
+              href={undefined}
+              className="btn btn-outline"
+              aria-label="Download curriculum vitae PDF (not yet available)"
+              aria-disabled="true"
+              onClick={(e) => e.preventDefault()}
+            >
+              Download CV
             </a>
           </div>
         </div>

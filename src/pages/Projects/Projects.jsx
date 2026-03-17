@@ -6,43 +6,50 @@ const projects = [
     desc: 'Carbon nanotube based humidity sensor with triple electrode design achieving high sensitivity and fast response time. Novel fabrication process on flexible substrate.',
     journal: 'Sensors & Actuators A: Physical, 2024',
     tags: ['MEMS', 'CNT', 'Sensors'],
-    link: '#',
+    link: '',
   },
   {
     title: 'Ionization Aerosol Sensor for Li-ion Battery Safety',
     desc: 'Aerosol ionization detection mechanism for early thermal runaway detection in lithium-ion batteries, enabling real-time safety monitoring in EV and energy storage systems.',
     journal: 'IEEE Sensors Journal, 2025',
     tags: ['Safety', 'IoT', 'Sensors'],
-    link: '#',
+    link: '',
   },
   {
     title: 'CNC Machine via Wireless IoT',
     desc: 'Wireless IoT-controlled CNC machine implementation using Arduino and ESP modules, enabling remote precision control. Published IEEE conference paper with 49+ citations.',
     journal: 'IEEE Conference, 2020 · 49+ citations',
     tags: ['IoT', 'CNC', 'Arduino'],
-    link: '#',
+    link: '',
   },
   {
     title: 'MEMS Pressure Sensor Design',
     desc: 'COMSOL Multiphysics-based simulation and fabrication design of MEMS pressure sensor for environmental monitoring applications with optimized diaphragm geometry.',
     journal: 'Microsystem Technologies, 2023',
     tags: ['MEMS', 'COMSOL', 'Fabrication'],
-    link: '#',
+    link: '',
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" aria-labelledby="proj-heading">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <h2 id="proj-heading" className="section-title">Projects</h2>
         <p className="section-subtitle">Key research projects and engineering work</p>
         <div className="projects-grid">
           {projects.map((p) => (
-            <div key={`${p.title}-${p.link}`} className="card project-card">
+            <div key={p.title} className="card project-card">
               <div className="project-header">
                 <h3 className="project-title">{p.title}</h3>
-                <a href={p.link} className="project-link" aria-label="View project">
+                <a
+                  href={p.link || undefined}
+                  className={`project-link${p.link ? '' : ' project-link--disabled'}`}
+                  aria-label={p.link ? `View ${p.title}` : 'Link not available'}
+                  {...(!p.link && { 'aria-disabled': 'true' })}
+                  {...(p.link && { target: '_blank', rel: 'noreferrer' })}
+                  onClick={!p.link ? (e) => e.preventDefault() : undefined}
+                >
                   <FaExternalLinkAlt />
                 </a>
               </div>

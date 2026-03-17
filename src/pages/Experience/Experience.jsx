@@ -27,13 +27,13 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience">
+    <section id="experience" aria-labelledby="exp-heading">
       <div className="container">
-        <h2 className="section-title">Experience</h2>
+        <h2 id="exp-heading" className="section-title">Experience</h2>
         <p className="section-subtitle">Professional journey and research positions</p>
-        <div className="timeline">
+        <div className="timeline" role="list">
           {experiences.map((exp) => (
-            <div key={`${exp.role}-${exp.org}`} className="timeline-item">
+            <div role="listitem" key={`${exp.role}-${exp.org}`} className="timeline-item">
               <div className="timeline-dot" />
               <div className="card timeline-card">
                 <div className="exp-header">

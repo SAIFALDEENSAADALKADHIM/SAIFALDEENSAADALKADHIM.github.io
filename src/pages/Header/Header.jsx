@@ -4,6 +4,8 @@ import { SiOrcid } from 'react-icons/si'
 import { FaGoogleScholar } from 'react-icons/fa6'
 import './Header.css'
 
+const NAV_ID = 'primary-navigation'
+
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Experience', href: '#experience' },
@@ -20,9 +22,18 @@ export default function Header() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
+    const onKey = (e) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('keydown', onKey)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('keydown', onKey)
+    }
   }, [])
+
+  const toggleMenu = () => setMenuOpen((o) => !o)
 
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
@@ -33,13 +44,15 @@ export default function Header() {
 
         <button
           className="menu-toggle"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          aria-controls={NAV_ID}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        <nav className={`header-nav ${menuOpen ? 'open' : ''}`}>
+        <nav id={NAV_ID} className={`header-nav ${menuOpen ? 'open' : ''}`}>
           {navLinks.map((link) => (
             <a
               key={link.label}

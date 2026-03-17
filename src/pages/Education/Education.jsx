@@ -26,9 +26,9 @@ const degrees = [
 
 export default function Education() {
   return (
-    <section id="education">
+    <section id="education" aria-labelledby="edu-heading">
       <div className="container">
-        <h2 className="section-title">Education</h2>
+        <h2 id="edu-heading" className="section-title">Education</h2>
         <p className="section-subtitle">Academic background and degrees</p>
         <div className="edu-grid">
           {degrees.map((d) => (
