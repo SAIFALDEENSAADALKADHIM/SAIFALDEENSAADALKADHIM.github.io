@@ -38,8 +38,8 @@ export default function Projects() {
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">Key research projects and engineering work</p>
         <div className="projects-grid">
-          {projects.map((p, i) => (
-            <div key={i} className="card project-card">
+          {projects.map((p) => (
+            <div key={`${p.title}-${p.link}`} className="card project-card">
               <div className="project-header">
                 <h3 className="project-title">{p.title}</h3>
                 <a href={p.link} className="project-link" aria-label="View project">

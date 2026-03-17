@@ -31,8 +31,8 @@ export default function Education() {
         <h2 className="section-title">Education</h2>
         <p className="section-subtitle">Academic background and degrees</p>
         <div className="edu-grid">
-          {degrees.map((d, i) => (
-            <div key={i} className="card edu-card">
+          {degrees.map((d) => (
+            <div key={`${d.degree}-${d.institution}`} className="card edu-card">
               <div className="edu-icon">
                 <FaGraduationCap />
               </div>

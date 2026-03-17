@@ -32,8 +32,8 @@ export default function Experience() {
         <h2 className="section-title">Experience</h2>
         <p className="section-subtitle">Professional journey and research positions</p>
         <div className="timeline">
-          {experiences.map((exp, i) => (
-            <div key={i} className="timeline-item">
+          {experiences.map((exp) => (
+            <div key={`${exp.role}-${exp.org}`} className="timeline-item">
               <div className="timeline-dot" />
               <div className="card timeline-card">
                 <div className="exp-header">

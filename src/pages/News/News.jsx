@@ -28,8 +28,8 @@ export default function News() {
         <h2 className="section-title">News</h2>
         <p className="section-subtitle">Recent updates and announcements</p>
         <div className="news-grid">
-          {newsItems.map((item, i) => (
-            <div key={i} className="card news-card">
+          {newsItems.map((item) => (
+            <div key={`${item.title}-${item.date}`} className="card news-card">
               <div className="news-top">
                 <FaNewspaper className="news-icon" />
                 <span className="news-tag tag">{item.tag}</span>
