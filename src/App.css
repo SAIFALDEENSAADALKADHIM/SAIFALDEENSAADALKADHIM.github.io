@@ -10,7 +10,7 @@ section {
   padding: 96px 0;
 }
 
-section:nth-child(even) {
+section:nth-of-type(even) {
   background: radial-gradient(circle at 20% 20%, rgba(33, 150, 243, 0.05), transparent 45%), var(--bg-secondary);
 }
 
