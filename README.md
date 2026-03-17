@@ -17,7 +17,7 @@
 
 | 📄 Publications | 🏅 Citations | 🔬 Research Areas | 🌍 IEEE Communities |
 |:-:|:-:|:-:|:-:|
-| **137+** | **200+** | MEMS · CNT · IoT · Blockchain | **35+** |
+| **12+** | **200+** | MEMS · CNT · IoT · Blockchain | **35+** |
 
 </div>
 
