@@ -53,7 +53,7 @@ export default function Header() {
         </nav>
 
         <div className="header-socials">
-          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com/SAIFALDEENSAADALKADHIM" target="_blank" rel="noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
