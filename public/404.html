@@ -4,19 +4,14 @@
   <meta charset="utf-8">
   <title>Redirecting…</title>
   <script>
-    // SPA redirect: preserve path, query, and hash after the repo base.
-    // Must stay in sync with the `base` value in vite.config.js.
-    var base = '/SAIFALDEENSAADALKADHIM.github.io/';
+    // SPA redirect: preserve path, query, and hash for GitHub Pages user site.
     var l = window.location;
-    // Only strip the base prefix when the current pathname actually starts with it.
-    var rest = l.pathname.startsWith(base) ? l.pathname.slice(base.length) : '';
-    var path = rest + l.search + l.hash;
-    var dest = base + (path ? '?p=' + encodeURIComponent(path) : '');
-    l.replace(dest);
+    var path = l.pathname.slice(1) + l.search + l.hash;
+    l.replace('/' + (path ? '?p=' + encodeURIComponent(path) : ''));
   </script>
-  <link rel="canonical" href="/SAIFALDEENSAADALKADHIM.github.io/">
+  <link rel="canonical" href="/">
   <noscript>
-    <meta http-equiv="refresh" content="0; url=/SAIFALDEENSAADALKADHIM.github.io/">
+    <meta http-equiv="refresh" content="0; url=/">
   </noscript>
 </head>
 <body></body>
