@@ -75,7 +75,7 @@ As **Vice Chair of IEEE P2418.11 Working Group** *(Blockchain-based Physical Dig
 ## 💼 Professional Experience
 
 ```
-Ph.D. Researcher (MEMS)            Xi'an Jiaotong University, China       2020 – 2025
+Ph.D. Researcher (MEMS)            Xi'an Jiaotong University, China       2020 – 2026
 Head of Department IT              Shiite Endowments Diwan, Iraq          2015 – 2020
 Assistant Professor                Al-Furat Al-Awsat Technical University  2017 – 2020
 Project Manager                    Shiite Endowments Diwan, Iraq           2017 – 2020
@@ -86,7 +86,7 @@ IC Design Engineer                 Al Bader Electronic Industries, Iraq    2012 
 <summary><b>📋 Experience Details</b></summary>
 <br>
 
-**Ph.D. Researcher (MEMS)** | Xi'an Jiaotong University, China | 2020–2025
+**Ph.D. Researcher (MEMS)** | Xi'an Jiaotong University, China | 2020–2026
 Lead researcher on high-sensitivity sensor projects for ionization-based detection and industrial safety.
 
 **Research Associate** | University of Technology, Baghdad | 2015–2020
