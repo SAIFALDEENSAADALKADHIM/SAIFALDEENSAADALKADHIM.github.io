@@ -21,6 +21,14 @@
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
   --radius: 12px;
   --radius-sm: 6px;
+  /* spacing scale */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
   color-scheme: dark;
 }
 
@@ -99,7 +107,7 @@ button:focus-visible {
   border-radius: var(--radius-sm);
 }
 
-/* Skip link */
+/* Skip navigation link */
 .skip-link {
   position: absolute;
   left: -999px;
