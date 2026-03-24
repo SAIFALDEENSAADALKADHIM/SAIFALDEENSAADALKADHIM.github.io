@@ -1,6 +1,6 @@
 <div align="center">
 
-# Saif Aldeen Saad Al-Kadhim.
+# Saif Aldeen Saad Al-Kadhim
 
 [![IEEE Senior Member](https://img.shields.io/badge/IEEE-Senior%20Member-00629B?style=for-the-badge&logo=ieee&logoColor=white)](https://www.ieee.org/)
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=3rVW_uYAAAAJ&hl=en&oi=ao)
