@@ -17,7 +17,7 @@
 
 | 📄 Publications | 🏅 Citations | 🔬 Research Areas | 🌍 IEEE Communities |
 |:-:|:-:|:-:|:-:|
-| **12+** | **200+** | MEMS · SmartGrid · IoT · Blockchain | **35+** |
+| **12+** | **200+** | MEMS · Smart Grid · IoT · Blockchain | **35+** |
 
 </div>
 
