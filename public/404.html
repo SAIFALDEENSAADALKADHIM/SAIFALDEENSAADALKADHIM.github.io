@@ -6,8 +6,8 @@
   <script>
     // SPA redirect: preserve path, query, and hash for GitHub Pages user site.
     var l = window.location;
-    var dest = '/' + (l.search ? '?p=' + encodeURIComponent(l.pathname.slice(1) + l.search + l.hash) : '');
-    l.replace(dest);
+    var path = l.pathname.slice(1) + l.search + l.hash;
+    l.replace('/' + (path ? '?p=' + encodeURIComponent(path) : ''));
   </script>
   <link rel="canonical" href="/">
   <noscript>
